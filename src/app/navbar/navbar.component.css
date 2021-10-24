@@ -1,0 +1,12 @@
+header{
+    background-color:navajowhite ;
+    height: 100px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.navbar-dark .navbar-brand{
+    color: #fed136;
+    font-size: 40px;
+    font-family: kaushan script;
+}

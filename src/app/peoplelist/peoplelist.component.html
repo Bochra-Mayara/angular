@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="container">
+<h4>People List</h4>
+<button pButton pRipple type="button" label="Create User" class="p-button-raised p-button-warning" [routerLink]="['/add-user']"></button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Cin</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Phone</th>
+        <th scope="col">temperature</th>
+        <th scope="col">#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <tr *ngFor="let item1 of  listuser ">
+          <td>{{ item1.cin }}</td>
+          <td>{{ item1.firstname }}</td>
+          <td>{{ item1.lastname }}</td>
+          <td>{{ item1.phone }}</td>
+          <td>{{ item1.temperature }}</td>
+          <td>
+          <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" (click)="edit(item1.$key)"></button>
+          <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="openDialog(item1.$key)"></button>
+         
+             
+      
+           
+          
+         
+      </td>
+        
+           
+          
+         
+          
+      </tr>
+     
+    </tbody>
+    
+  </table>
+</div>

@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="offset-md-4 col-md-4">
+    <button pButton pRipple type="button" label="Back" class="p-button-raised p-button-warning" [routerLink]="['/peoplelist']" ></button>
+   <h2>Update User</h2>
+    <form [formGroup]="updateForm"  (validSubmit)="onSubmit1() ">
+    <label>Cin</label>
+                    <input class="form-control" type="cin" name="cin" formControlName="Cin" value = "{{ data.cin }}" [(ngModel)]="data.cin">
+    <label>Firstname</label>
+    <input class="form-control" type="firstname" name="firstname" formControlName="Firstname"  value = "{{ data.firstname }}" [(ngModel)]="data.firstname">
+    <label>Lastname</label>
+    <input class="form-control" type="lastname" name="lastname" formControlName="Lastname"  value = "{{ data.lastname }}" [(ngModel)]="data.lastname">
+    <label>Phone</label>
+    <input class="form-control" type="phone" name="phone" formControlName="Phone" value = "{{ data.phone }}" [(ngModel)]="data.phone">
+    <br>
+    <button type="submit" class="btn btn-warning" >Update User</button>
+    </form>
+    </div>
+</div>
